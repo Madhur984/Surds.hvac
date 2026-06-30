@@ -16,6 +16,7 @@
   <a href="#idea" class="hideable">The idea</a>
   <a href="#build" class="hideable">The build</a>
   <a href="#features" class="hideable">What it does</a>
+  <a href="#factory" class="hideable">Factory</a>
   <a href="#talk">Talk →</a>
 </nav>
 
@@ -50,6 +51,36 @@
         </svg>
       </div>
       <span style="display:block;font-family:var(--mono);font-weight:700;font-size:0.57rem;letter-spacing:0.06em;color:rgba(245,239,225,0.6);text-transform:uppercase">one at a desk vs five in a huddle</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACTORY FLOOR · THERMAL SENSOR FEED + BOUNDARIES ============ -->
+<section class="scene" id="factory" style="padding-top:clamp(20px,3vw,40px)">
+  <div class="scene__in">
+    <span class="sticker sticker--rust" style="--r:-2deg"><span class="tag">Thermal sensor feed</span></span>
+    <h2 class="bigline" style="margin:22px 0 16px">The <span class="o">factory floor,</span> straight off the <span class="a">thermal sensor.</span></h2>
+    <p class="subline">A top-down infrared capture of the shop floor, with the analytics overlay locked on: walls and machine bays outlined, furnaces boxed as hotspots, every worker tracked, and the cool zones flagged where cooling should be routed.</p>
+
+    <div class="fac-stage" data-fac>
+      <canvas id="faccanvas" class="faccanvas" role="img"
+        aria-label="Top-down infrared thermal sensor capture of a factory floor with an analytics overlay: outlined walls and machine bays, furnace hotspot boxes, worker-tracking boxes and cooling zones"></canvas>
+      <span class="osd osd-tl"><span class="rec"><span class="rdot"></span> REC</span> · THERMAL SENSOR A1 · TOP-DOWN</span>
+      <span class="osd osd-tr"><span id="fac-clock">00:00:00</span> · PII MASKED</span>
+      <span class="osd osd-bl">IRONBOW · 80×45 · 8.7 Hz · TRACKING <span id="fac-trk">10</span></span>
+    </div>
+
+    <div class="fac-legend">
+      <span><i class="sw-furn"></i> Furnace hotspot</span>
+      <span><i class="sw-mach"></i> Machine bay</span>
+      <span><i class="sw-work"></i> Tracked worker</span>
+      <span><i class="sw-cool"></i> Cooling needed</span>
+    </div>
+
+    <div class="spread" style="margin-top:22px">
+      <span class="sticker sticker--cream" style="--r:-3deg"><span class="tag" style="color:#241b10">Hotspots near furnaces</span></span>
+      <span class="sticker sticker--cream" style="--r:2deg"><span class="tag" style="color:#241b10">Workers, not faces</span></span>
+      <span class="sticker sticker--grass" style="--r:-2deg"><span class="tag" style="color:#16210a">Cool only where it's needed</span></span>
     </div>
   </div>
 </section>
@@ -391,5 +422,6 @@
 </footer>
 
 <script src="js/app.js"></script>
+<script src="js/factory.js"></script>
 </body>
 </html>
